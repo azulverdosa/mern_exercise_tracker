@@ -35,6 +35,6 @@ export const WorkoutsContextProvider = ({ children }) => {
   //dispatch function invokes reducer function (workoutsReducer) and passes the action into the reducder function to update state using the action data
 
   return (
-    <WorkoutsContext.Provider value={{ state, dispatch }}>{children}</WorkoutsContext.Provider>
+    <WorkoutsContext.Provider value={{ ...state, dispatch }}>{children}</WorkoutsContext.Provider>
   );
 };
