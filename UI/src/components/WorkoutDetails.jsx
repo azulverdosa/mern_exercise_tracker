@@ -8,7 +8,7 @@ const WorkoutDetails = ({ workout }) => {
     const res = await axios.delete('/workouts/' + workout._id);
 
     if (res.status === 200 && res.data) {
-      dispatch({ type: 'DELETE_WORKOUTS', payload: res.data });
+      dispatch({ type: 'DELETE_WORKOUT', payload: res.data });
       console.log('Workout Deleted');
     }
   };
@@ -26,6 +26,7 @@ const WorkoutDetails = ({ workout }) => {
       </p>
       <p>{workout.createdAt}</p>
       <span onClick={handleDeleteClick}>delete</span>
+      {/* button?? */}
     </main>
   );
 };

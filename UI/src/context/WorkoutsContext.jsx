@@ -7,6 +7,8 @@ export const workoutsReducer = (state, action) => {
   //state here is initial (previous) state before reducer change - from useRecuder
   //action is the object that is passed into the disptch function
   //first check action type from dispatch & return new state value (payload)
+
+  //TODO: abstract action type into reusable enum, e.g. WORKOUT_ACTIONS.DELETE_WORKOUT
   switch (action.type) {
     case 'SET_WORKOUTS':
       return {
