@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import axios from 'axios';
+import { useWorkoutsContext } from '../hooks/useWorkoutsContext';
 // import urlJoin from 'url-join';
-
 import WorkoutDetails from '../components/WorkoutDetails';
 import NewWorkoutForm from '../components/NewWorkoutForm';
 
 const Home = () => {
-  const [workouts, setWorkouts] = useState(null);
+  const { workouts, dispatch } = useWorkoutsContext();
 
   useEffect(() => {
     (async () => {
@@ -15,7 +15,7 @@ const Home = () => {
         //note - urlJoin vs proxy - when and how to use
 
         if (res.status === 200 && res.data) {
-          setWorkouts(res.data);
+          dispatch({ type: 'SET_WORKOUTS', payload: res.data });
         } else {
           throw res;
         }
@@ -24,7 +24,7 @@ const Home = () => {
         // this err could be for anything in the try, not just axios calls
       }
     })(); // IIFE - https://developer.mozilla.org/en-US/docs/Glossary/IIFE
-  }, []);
+  }, [dispatch]); //dispatch here??
 
   return (
     <main className="home">
