@@ -24,7 +24,7 @@ const Home = () => {
         // this err could be for anything in the try, not just axios calls
       }
     })(); // IIFE - https://developer.mozilla.org/en-US/docs/Glossary/IIFE
-  }, [dispatch]); //dispatch here??
+  }, [dispatch]);
 
   return (
     <main className="home">
