@@ -4,8 +4,6 @@
 
 ## Table of Contents
 
----
-
 - [General Info](#general-information)
 - [Technologies Used](#technologies-used)
 - [Features](#features)
@@ -19,13 +17,9 @@
 
 ## General Information
 
----
-
 This is a simple MERN application to track user exercises. It's a helpful app for tracking (exercises or otherwise) and was intended for me to continue to work on my fullstack building. It is also an attempt for me to learn Authentiation.
 
 ## Tech Stack
-
----
 
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=CSS3&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&)
@@ -35,8 +29,6 @@ This is a simple MERN application to track user exercises. It's a helpful app fo
 ![Express](https://img.shields.io/badge/Express-CA4245.svg?style=for-the-badge&logo=Express&logoColor=white)
 
 ## Features
-
----
 
 List the ready features here:
 
@@ -56,8 +48,6 @@ Exercise Delete Button
 - Description -->
 
 ## Setup
-
----
 
 ### Run Locally
 
@@ -87,21 +77,15 @@ Runs the server. Open [http://localhost:4040](http://localhost:4040) to view it 
 
 ## Usage
 
----
-
 How does one go about using it? Provide various use cases and code examples here.
 
     write-your-code-here
 
 ## Project Status
 
----
-
-Project is: In Progress
+In Progress
 
 ## Room for Improvement
-
----
 
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.
 
@@ -117,13 +101,9 @@ To do:
 
 ## Acknowledgements
 
----
-
 Many thanks to [Net Ninja](https://netninja.dev/), this project was based on [this tutorial](https://www.youtube.com/watch?v=98BzS5Oz5E4&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=1) from the [Net Ninja YouTube](https://www.youtube.com/@NetNinja) page!
 
 ## Contact
-
----
 
 Created by [@azulverdosa](ellemocambo@gmail.com) - feel free to contact me!
 
@@ -131,14 +111,10 @@ Created by [@azulverdosa](ellemocambo@gmail.com) - feel free to contact me!
 
 ## 🤝 Support
 
----
-
 Contributions, issues, and feature requests are welcome!
 
 Give a ⭐️ if you like this project!
 
 ## License
-
----
 
 MIT License Copyright (c) [2023] [AvaElise]
