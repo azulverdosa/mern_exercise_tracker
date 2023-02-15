@@ -42,25 +42,22 @@ List the ready features here:
 
 Exercise log form
 
-- Description
+- Form to enter workout details:
+
   ![Home Page](/ui/screenshots/2.png 'Home Page')
 
 Exercise Delete Button
 
-- Description
+- Delete a workout from the database:
   ![Home Page](/ui/screenshots/3.png 'Home Page')
 
-Awesome feature 3
+<!-- Awesome feature 3
 
-- Description
+- Description -->
 
 ## Setup
 
 ---
-
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
-
-Proceed to describe how to install / setup one's local environment / get started with the project.
 
 ### Run Locally
 
@@ -110,13 +107,13 @@ Include areas you believe need improvement / could be improved. Also add TODOs f
 
 Improvement Thoughts:
 
-- Improvement to be done 1
-- Improvement to be done 2
+- Second part of this app is to add authentication for users to have accounts.
+- Styling needs to be updated.
 
 To do:
 
-- Feature to be added 1
-- Feature to be added 2
+- [ ] Add Auth
+- [ ] re-design
 
 ## Acknowledgements
 
