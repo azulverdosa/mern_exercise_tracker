@@ -1,70 +1,143 @@
-# Getting Started with Create React App
+# Exercise Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> A relatively simple fullstack project that allows users to track workouts. Live demo [here](http://demoexamplecomingsoon.com 'Not a real link') (coming soon).
 
-## Available Scripts
+## Table of Contents
+
+---
+
+- [General Info](#general-information)
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Setup](#setup)
+- [Usage](#usage)
+- [Project Status](#project-status)
+- [Room for Improvement](#room-for-improvement)
+- [Acknowledgements](#acknowledgements)
+- [Contact](#contact)
+
+## General Information
+
+---
+
+This is a simple MERN application to track user exercises. It's a helpful app for tracking (exercises or otherwise) and was intended for me to continue to work on my fullstack building. It is also an attempt for me to learn Authentiation.
+
+## Tech Stack
+
+---
+
+![CSS3](https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=CSS3&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&)
+![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black)
+![React](https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248.svg?style=for-the-badge&logo=MongoDB&logoColor=white)
+![Express](https://img.shields.io/badge/Express-CA4245.svg?style=for-the-badge&logo=Express&logoColor=white)
+
+## Features
+
+---
+
+List the ready features here:
+
+Exercise log form
+
+- Description
+  ![Home Page](/ui/screenshots/2.png 'Home Page')
+
+Exercise Delete Button
+
+- Description
+  ![Home Page](/ui/screenshots/3.png 'Home Page')
+
+Awesome feature 3
+
+- Description
+
+## Setup
+
+---
+
+What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
+
+Proceed to describe how to install / setup one's local environment / get started with the project.
+
+### Run Locally
+
+1. Clone repo locally
+2. Run `npm install` in your bash/command line in the main project folder
+3. Run `npm start` in your bash/command line in the UI folder
+4. Open [http://localhost:4040](http://localhost:4040) to view it in the browser.
+5. Run `npm run dev` in your bash/command line in the API folder
+6. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### Available Commands
 
 In the project directory, you can run:
 
-### `npm start`
+`"npm start" : "react-scripts start"`,
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The app is built using `create-react-app` so this command Runs the app in Development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser. You also need to run the server file as well to completely run the app. The page will reload if you make edits.
+You will also see any lint errors in the console.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+`"npm run dev": "concurrently "nodemon server" "npm run start"`,
 
-### `npm test`
+For running the server and app together I am using nodemon concurrently, this helps a lot in the MERN application as it runs both the server (client and server) concurrently. So you can work on them both together.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+How does one go about using it? Provide various use cases and code examples here.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    write-your-code-here
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Status
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Project is: In Progress
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Room for Improvement
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Include areas you believe need improvement / could be improved. Also add TODOs for future development.
 
-## Learn More
+Improvement Thoughts:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Improvement to be done 1
+- Improvement to be done 2
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To do:
 
-### Code Splitting
+- Feature to be added 1
+- Feature to be added 2
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Acknowledgements
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Many thanks to [Net Ninja](https://netninja.dev/), this project was based on [this tutorial](https://www.youtube.com/watch?v=98BzS5Oz5E4&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=1) from the [Net Ninja YouTube](https://www.youtube.com/@NetNinja) page!
 
-### Making a Progressive Web App
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+Created by [@azulverdosa](ellemocambo@gmail.com) - feel free to contact me!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- [LinkedIn](https://www.linkedin.com/in/avatorre/ 'linked')
 
-### Deployment
+## 🤝 Support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+Contributions, issues, and feature requests are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Give a ⭐️ if you like this project!
+
+## License
+
+---
+
+MIT License Copyright (c) [2023] [AvaElise]
