@@ -33,19 +33,19 @@ This is a simple MERN application to track user exercises. It's a helpful app fo
 Exercise list:
 
 - List of exercises
-  ![Main page](ui/screenshots/1.png 'Main Page')
+  ![Main page](ui/screenshots/Screenshot%202023-02-15%20at%204.46.34%20PM.png 'Main Page')
 
 Exercise log form:
 
 - Form to enter workout details:
 
-  ![Form](ui/screenshots/2.png 'Form')
+  ![Form](ui/screenshots/Screenshot%202023-02-15%20at%204.46.45%20PM.png 'Form')
 
 Exercise Delete Button:
 
 - Delete a workout from the database:
 
-  ![Delete workout](ui/screenshots/3.png 'delete Workout')
+  ![Delete workout](ui/screenshots/Screenshot%202023-02-15%20at%204.48.30%20PM.png 'delete Workout')
 
 <!-- Awesome feature 3
 
