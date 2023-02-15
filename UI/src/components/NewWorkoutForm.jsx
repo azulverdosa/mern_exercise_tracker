@@ -8,6 +8,7 @@ const NewWorkout = () => {
   const [weight, setWeight] = useState('');
   const [reps, setReps] = useState('');
   const [error, setError] = useState(null);
+  const [emptyFields, setEmptyFields] = useState([]);
 
   const clearFields = () => {
     setReps('');
@@ -27,7 +28,7 @@ const NewWorkout = () => {
     const workout = { title, reps, weight };
 
     try {
-      let res = await axios.post('/workouts', workout, {
+      const res = await axios.post('/workouts', workout, {
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json;charset=UTF-8',
@@ -38,12 +39,14 @@ const NewWorkout = () => {
         console.log('New Workout Added');
         clearFields();
         setError(null);
-        console.log(res.data);
+        setEmptyFields([]);
         dispatch({ type: 'CREATE_WORKOUT', payload: res.data });
       }
     } catch (err) {
-      console.log('ERROR: ', err);
-      setError(err.message);
+      console.error('ERROR: ', err);
+
+      setEmptyFields(err?.response?.data?.emptyFields);
+      setError(err?.response?.data?.error || err?.message || 'something went wrong in the server');
     }
   };
 
@@ -53,13 +56,28 @@ const NewWorkout = () => {
         <h3>Add a new workout</h3>
 
         <label>Exercise Title</label>
-        <input type="text" onChange={(e) => setTitle(e.target.value)} value={title} />
+        <input
+          type="text"
+          onChange={(e) => setTitle(e.target.value)}
+          value={title}
+          className={emptyFields.includes('title') ? 'error' : ''}
+        />
 
         <label>Weight (in Kg)</label>
-        <input type="number" onChange={(e) => setWeight(e.target.value)} value={weight} />
+        <input
+          type="number"
+          onChange={(e) => setWeight(e.target.value)}
+          value={weight}
+          className={emptyFields.includes('weight') ? 'error' : ''}
+        />
 
         <label>Reps</label>
-        <input type="number" onChange={(e) => setReps(e.target.value)} value={reps} />
+        <input
+          type="number"
+          onChange={(e) => setReps(e.target.value)}
+          value={reps}
+          className={emptyFields.includes('reps') ? 'error' : ''}
+        />
 
         <button onClick={handleAddDataClick}>Add</button>
         {error && <div className="error">Error: {error}</div>}
