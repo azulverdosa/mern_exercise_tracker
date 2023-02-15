@@ -36,12 +36,12 @@ Exercise log form
 
 - Form to enter workout details:
 
-  ![Home Page](/ui/screenshots/2.png 'Home Page')
+  ![Home Page](ui/screenshots/2.png 'Home Page')
 
 Exercise Delete Button
 
 - Delete a workout from the database:
-  ![Home Page](/ui/screenshots/3.png 'Home Page')
+  ![Home Page](ui/screenshots/3.png 'Home Page')
 
 <!-- Awesome feature 3
 
