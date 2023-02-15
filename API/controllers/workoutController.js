@@ -9,11 +9,31 @@ const getAllWorkouts = async (req, res) => {
 
 const createWorkout = async (req, res) => {
   const { title, reps, weight } = req.body;
+
+  const emptyFields = [];
+
+  if (!title) {
+    emptyFields.push('title');
+  }
+  if (!weight) {
+    emptyFields.push('weight');
+  }
+
+  if (!reps) {
+    emptyFields.push('reps');
+  }
+
+  if (emptyFields.length > 0) {
+    console.log(emptyFields);
+    return res.status(400).json({ error: 'These fields require input', emptyFields });
+  }
+
   try {
     const workouts = await Workout.create({ title, reps, weight });
-    return res.status(200).json(workouts);
+    return res.status(200).send(workouts); //.json vs .send ??
   } catch (err) {
-    return res.status(500).send({ err: err.message });
+    console.log(err.message);
+    return res.status(500).send({ error: err.message });
   }
 };
 
