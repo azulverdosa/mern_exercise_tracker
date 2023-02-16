@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 const workoutRoutes = require('./routes/workoutRoutes');
+const userRoutes = require('./routes/userRoutes');
 
 //create express app server
 const app = express();
@@ -35,6 +36,7 @@ app.get('/hello-hello', (req, res) => {
 });
 
 app.use('/workouts', workoutRoutes);
+app.use('/user', userRoutes);
 
 //Mongoose connect to DB
 mongoose.set('strictQuery', false); //for Mongoose7 update
