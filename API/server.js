@@ -31,7 +31,7 @@ app.use((req, res, next) => {
 });
 
 //routes
-app.get('/hello-hello', (req, res) => {
+app.get('/hello-world', (req, res) => {
   res.send('Welcome to the app 🙈 🙉 🙊');
 });
 
