@@ -61,7 +61,7 @@ Exercise Delete Button:
 4. Change into UI folder
 5. Run `npm install` in your bash/command line
 6. In the API folder, run `npm run dev` in your bash/command line
-7. Open [http://localhost:4000](http://localhost:4000) to view it in the browser.
+7. Open [http://localhost:4000/hello-world](http://localhost:4000/hello-world) to view it in the browser.
 8. In the UI folder, run `npm start` in your bash/command line
 9. Open [http://localhost:3000](http://localhost:3000) to view it n the browser.
 
