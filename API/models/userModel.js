@@ -18,4 +18,5 @@ const userSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model('User, userSchema');
+//static login method
+// userSchema.statics.module.exports = mongoose.model('User', userSchema);
