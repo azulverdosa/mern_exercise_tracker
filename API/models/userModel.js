@@ -7,7 +7,7 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
   name: {
     type: String,
-    required: true,
+    required: false,
   },
   email: {
     type: String,
@@ -36,7 +36,7 @@ userSchema.statics.register = async function ({ name, email, password }) {
   }
 
   const emailExists = await this.findOne({ email });
-  //better way other than this?
+  //better way other than "this"?
 
   if (emailExists) {
     throw Error('Email already in use');
@@ -47,6 +47,29 @@ userSchema.statics.register = async function ({ name, email, password }) {
   const newUser = await this.create({ name, email, password: pswdHash });
 
   return newUser;
+};
+
+//static login method
+userSchema.statics.login = async function ({ email, password }) {
+  if (!email || !password) {
+    throw Error('All fields must be filled');
+  }
+  const userExists = await this.findOne({ email });
+  //better way other than "this"?
+  //create const function?
+
+  if (!userExists) {
+    throw Error('User does not exist');
+  }
+
+  const match = await bcrypt.compare(password, userExists.password);
+  //userExists.password is the hashed password
+
+  if (!match) {
+    throw Error('Invalid login credentials');
+  }
+
+  return userExists;
 };
 
 module.exports = mongoose.model('User', userSchema);
