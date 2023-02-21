@@ -17,7 +17,7 @@
 
 ## General Information
 
-This is a simple MERN application to track user exercises. It's a helpful app for tracking (exercises or otherwise) and was intended for me to continue to work on my fullstack building. It is also an attempt for me to learn Authentiation.
+This is a simple MERN stack application to track user exercises. It's a helpful app for tracking (exercises or otherwise) and was intended to help me learn Authentiation and continue to work on my fullstack building using the MERN stack.
 
 ## Tech Stack
 
