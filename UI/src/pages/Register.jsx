@@ -7,10 +7,18 @@ const Register = () => {
   const [password, setPassword] = useState('');
   const { register, isLoading, error } = useRegister();
 
+  const clearFields = () => {
+    setName('');
+    setEmail('');
+    setPassword('');
+  };
+
   const handleRegisterSubmit = async (e) => {
     e.preventDefault();
 
     await register(name, email, password);
+
+    clearFields();
   };
 
   return (
