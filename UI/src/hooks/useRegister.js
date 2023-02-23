@@ -11,16 +11,16 @@ export const useRegister = () => {
     setIsLoading(true);
     setError(null);
 
-    const user = { name, email, password };
+    const registerInfo = { name, email, password };
 
     try {
-      const res = await axios.post('/user/register', user, {
+      const res = await axios.post('/user/register', registerInfo, {
         headers: { 'Accept': 'application/json', 'Content-Type': 'application/json;charset=UTF-8' },
       });
 
       if (res.status === 200) {
         //save user to local storage
-        localStorage.setItem('user', res.data);
+        localStorage.setItem('user', JSON.stringify(res.data));
 
         //update AuthCOntext
         dispatch({ type: 'LOGIN', payload: res.data });
@@ -28,6 +28,7 @@ export const useRegister = () => {
         // NOTE: could res.data be changed to user? - prob not because user password is not hashed with just user
 
         setIsLoading(false);
+        console.log('User Created');
       }
     } catch (err) {
       console.error('ERROR: ', err);
