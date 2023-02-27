@@ -10,6 +10,8 @@ export const useLogout = () => {
 
     //dispatch logout action
     dispatch({ type: 'LOGOUT' });
+
+    console.log('User is Logged out');
   };
 
   return { logout };
