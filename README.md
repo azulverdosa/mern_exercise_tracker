@@ -90,7 +90,7 @@ How does one go about using it? Provide various use cases and code examples here
 
 ## Project Status
 
-In Progress
+In Progress - Almost done!
 
 ## Room for Improvement
 
