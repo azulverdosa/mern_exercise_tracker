@@ -20,15 +20,15 @@ export const useLogin = () => {
 
       if (res.status === 200) {
         //save user to local storage
-        localStorage.setItem('user', res.data);
+        localStorage.setItem('user', JSON.stringify(res.data));
 
         //update AuthCOntext
         dispatch({ type: 'LOGIN', payload: res.data });
 
-        // NOTE: could res.data be changed to user? - prob not because user password is not hashed with just user
-
         setIsLoading(false);
         console.log('User Loggedin');
+        console.log('res.data', res.data);
+        console.log('registerInfo', loginInfo);
       }
     } catch (err) {
       console.error('ERROR: ', err);

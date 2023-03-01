@@ -25,10 +25,10 @@ export const useRegister = () => {
         //update AuthCOntext
         dispatch({ type: 'LOGIN', payload: res.data });
 
-        // NOTE: could res.data be changed to user? - prob not because user password is not hashed with just user
-
         setIsLoading(false);
         console.log('User Created');
+        console.log('res.data', res.data);
+        console.log('registerInfo', registerInfo);
       }
     } catch (err) {
       console.error('ERROR: ', err);
