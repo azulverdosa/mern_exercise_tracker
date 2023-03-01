@@ -8,9 +8,10 @@ const createToken = (_id) => {
 
 //login user
 const loginUser = async (req, res) => {
-  const { email, password } = req.body;
+  const { name, email, password } = req.body;
   try {
     const user = await User.login({
+      name,
       email,
       password,
     });
@@ -20,7 +21,7 @@ const loginUser = async (req, res) => {
     //user object was just created above and we can now access the _id from it
 
     console.log('User logged-in');
-    return res.status(200).send({ email, token });
+    return res.status(200).send({ name, email, token });
   } catch (err) {
     console.log(err.message);
     return res.status(400).send({ error: err.message });
