@@ -30,26 +30,34 @@ This is a simple MERN stack application to track user exercises. It's a helpful 
 
 ## Features
 
-Exercise list:
+Login & Register Forms:
 
-- List of exercises
-  ![Main page](ui/screenshots/Screenshot%202023-02-15%20at%204.46.34%20PM.png 'Main Page')
+- Login Form
+  ![login](ui/screenshots/login.png 'Login Page')
 
-Exercise log form:
+- Register Form
+  ![register](ui/screenshots/register.png 'Register Page')
+
+Exercise Log Form:
 
 - Form to enter workout details:
+  ![add workout](ui/screenshots/addworkout.png 'Form')
 
-  ![Form](ui/screenshots/Screenshot%202023-02-15%20at%204.46.45%20PM.png 'Form')
+  - once details have been added, you can click to add the workout or clearn the form.
 
-Exercise Delete Button:
+Exercise Details Card:
 
-- Delete a workout from the database:
+- Details of the workouts that have been saved
 
-  ![Delete workout](ui/screenshots/Screenshot%202023-02-15%20at%204.48.30%20PM.png 'delete Workout')
+  ![workout card details](ui/screenshots/workoutcarddetails.png 'Workout Details')
 
-<!-- Awesome feature 3
+  - you are able to see the workout name, details of the workout and also use the delete button
 
-- Description -->
+Authentication:
+
+- Different users can only see their own workouts:
+  ![user 1 workout details](ui/screenshots/user1.png 'Workout Details')
+  ![user 2 workout details](ui/screenshots/user2.png 'Workout Details')
 
 ## Setup
 
@@ -69,42 +77,42 @@ Exercise Delete Button:
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-In the project directory, you can run:
+In the UI folder directory, you can run:
 
 `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.
+In the API folder directory, you can run:
 
 `npm run dev`
 
-Runs the server. Open [http://localhost:4040](http://localhost:4040) to view it in your browser. I am also using nodemon.
+Runs the server. Open [http://localhost:4000](http://localhost:4000) to view it in your browser. I am also using nodemon so the server will restart & page will reload when you save changes.
 
-## Usage
+<!-- ## Usage
 
 How does one go about using it? Provide various use cases and code examples here.
 
-    write-your-code-here
+    write-your-code-here -->
 
 ## Project Status
 
-In Progress - Almost done!
+Status: COMPLETE!
 
 ## Room for Improvement
 
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
-
 Improvement Thoughts:
 
-- Second part of this app is to add authentication for users to have accounts.
+- Second part of this app is to add authentication for users to have accounts - DONE -
 - Styling needs to be updated.
+- I would like to change the user display email to a user display name.
 
 To do:
 
-- [ ] Add Auth
+- [x] Add Auth
 - [ ] re-design
+- [ ] display user name instead of email
 
 ## Acknowledgements
 
