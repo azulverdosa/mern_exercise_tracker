@@ -2,7 +2,9 @@ const Workout = require('../models/workoutModel');
 const mongoose = require('mongoose');
 
 const getAllWorkouts = async (req, res) => {
-  const workouts = await Workout.find({}).sort({ createdAt: -1 });
+  const user_id = req.user._id;
+
+  const workouts = await Workout.find({ user_id }).sort({ createdAt: -1 });
 
   return res.status(200).json(workouts);
 };
@@ -28,8 +30,10 @@ const createWorkout = async (req, res) => {
     return res.status(400).json({ error: 'These fields require input', emptyFields });
   }
 
+  //add doc to db
   try {
-    const workouts = await Workout.create({ title, reps, weight });
+    const user_id = req.user._id;
+    const workouts = await Workout.create({ title, reps, weight, user_id });
     return res.status(200).send(workouts); //.json vs .send ??
   } catch (err) {
     console.log(err.message);
