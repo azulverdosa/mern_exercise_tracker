@@ -1,9 +1,12 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { useWorkoutsContext } from '../hooks/useWorkoutsContext';
+import { useAuthContext } from '../hooks/useAuthContext';
 
 const NewWorkout = () => {
   const { dispatch } = useWorkoutsContext();
+  const { user } = useAuthContext();
+
   const [title, setTitle] = useState('');
   const [weight, setWeight] = useState('');
   const [reps, setReps] = useState('');
@@ -24,6 +27,10 @@ const NewWorkout = () => {
 
   const handleAddDataClick = async (e) => {
     e.preventDefault();
+    if (!user) {
+      setError('Please login to access this area');
+      return;
+    }
 
     const workout = { title, reps, weight };
 
@@ -32,6 +39,7 @@ const NewWorkout = () => {
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json;charset=UTF-8',
+          'Authorization': `Bearer ${user.token}`,
         },
       });
 
